@@ -1,8 +1,11 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 2rem 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  grid-template-areas: 'checkbox title delete';
+
+  /* set the third column to align items to the right */
 
   position: relative;
   width: 736px;
@@ -17,7 +20,15 @@
   margin-top: 0.75rem;
 }
 
+.container img {
+  grid-area: checkbox;
+  margin-left: 0.5rem;
+}
+
 p {
+  grid-area: title;
+  text-align: left;
+  align-self: center;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 140%;
@@ -31,6 +42,11 @@ p {
 }
 
 .container button {
+  grid-area: delete;
+  justify-self: end;
+  align-self: center;
+  margin-right: 0.75rem;
+
   background: transparent;
   border: 0;
 
