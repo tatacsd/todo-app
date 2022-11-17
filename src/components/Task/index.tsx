@@ -4,15 +4,24 @@ import checkIMG from '../../assets/check.svg';
 import uncheckIMG from '../../assets/uncheck.svg';
 import css from './Task.module.css';
 
-export function Task() {
-  const [isCheck, setIsCheck] = useState(false);
+export interface TaskProps {
+  id: string;
+  isChecked: boolean;
+  text: string;
+  onCheck?: (id: string) => void;
+  onDelete?: (id: string) => void;
+}
+
+export function Task({ id, isChecked, text, onCheck, onDelete }: TaskProps) {
+  const [isCheck, setIsCheck] = useState(isChecked);
 
   const handleCheckButtonClick = () => {
     setIsCheck(!isCheck);
+    onCheck && onCheck(id);
   };
 
   const handleDeleteComment = () => {
-    console.log('delete');
+    onDelete && onDelete(id);
   };
 
   return (
@@ -23,10 +32,7 @@ export function Task() {
         <img src={uncheckIMG} alt="uncheck" onClick={handleCheckButtonClick} />
       )}
 
-      <p className={isCheck ? css.checkedText : ''}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer.
-      </p>
+      <p className={isCheck ? css.checkedText : ''}>{text}</p>
       <button title="Delete comment" onClick={handleDeleteComment}>
         <Trash size={20} />
       </button>

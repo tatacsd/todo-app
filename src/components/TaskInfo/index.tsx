@@ -1,16 +1,24 @@
 import css from './TaskInfo.module.css';
 
-export function TaskInfo() {
+interface TaskInfoProps {
+  createdTasks: number;
+  completedTasks: number;
+}
+
+export function TaskInfo({ createdTasks, completedTasks }: TaskInfoProps) {
   return (
     <div className={css.container}>
       <div>
         <p>
-          Tarefas criadas <span>0</span>
+          Tarefas criadas <span>{createdTasks}</span>
         </p>
       </div>
       <div>
         <p>
-          Concluídas <span>0</span>
+          Concluídas{' '}
+          <span>
+            {createdTasks === 0 ? '0' : `${completedTasks} of ${createdTasks}`}
+          </span>
         </p>
       </div>
     </div>
