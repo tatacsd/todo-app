@@ -44,3 +44,12 @@ p {
 .container > button:hover {
   color: var(--red-300);
 }
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    left: calc(50% - 100% / 2);
+    top: 19rem;
+  }
+}

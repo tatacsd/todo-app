@@ -1,17 +1,17 @@
 .container {
-position: absolute;
-height: 200px;
-left: 0px;
-right: 0px;
-top: 0px;
+  position: absolute;
+  height: 200px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
 
-background: #0D0D0D;
+  background: var(--gray-700);
 
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container > img:nth-child(1) {
-    margin-right: 0.75rem; 
+  margin-right: 0.75rem;
 }
