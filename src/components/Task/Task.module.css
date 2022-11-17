@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 736px;
+  left: calc(50% - 736px / 2);
+  top: 280px;
+
+  padding: 1rem 0;
+  background: var(--gray-400);
+}
+
+.container + .container {
+  margin-top: 0.75rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: var(--gray-100);
+  margin: 0 0.75rem;
+}
+
+.checkedText {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.container button {
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+  line-height: 0;
+  color: var(--gray-300);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.container > button:hover {
+  color: var(--red-300);
+}

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 736px;
+  height: 244px;
+  left: calc(50% - 736px / 2);
+  top: 280px;
+
+  margin-top: 1.5rem;
+
+  border-top: 1px solid var(--gray-300);
+  border-radius: 8px;
+}
+
+.container img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    left: calc(50% - 100% / 2);
+    top: 18rem;
+    padding: 0 16px;
+  }
+}
