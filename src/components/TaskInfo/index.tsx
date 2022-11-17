@@ -10,12 +10,12 @@ export function TaskInfo({ createdTasks, completedTasks }: TaskInfoProps) {
     <div className={css.container}>
       <div>
         <p>
-          Tarefas criadas <span>{createdTasks}</span>
+          Created Tasks <span>{createdTasks}</span>
         </p>
       </div>
       <div>
         <p>
-          Concluídas{' '}
+          Completed Tasks
           <span>
             {createdTasks === 0 ? '0' : `${completedTasks} of ${createdTasks}`}
           </span>

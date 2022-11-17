@@ -7,26 +7,8 @@ import { NewTask } from './components/NewTask';
 import { Task, TaskProps } from './components/Task';
 import { TaskInfo } from './components/TaskInfo';
 
-const tasks: TaskProps[] = [
-  {
-    id: uuid(),
-    isChecked: false,
-    text: 'Integer urna',
-  },
-  {
-    id: uuid(),
-    isChecked: false,
-    text: 'Integer urna',
-  },
-  {
-    id: uuid(),
-    isChecked: false,
-    text: 'Integer urna',
-  },
-];
-
 function App() {
-  const [tasksList, setTasksList] = useState(tasks);
+  const [tasksList, setTasksList] = useState([] as TaskProps[]);
 
   const handleAddNewTask = (text: string) => {
     const newTask = {
@@ -35,13 +17,9 @@ function App() {
       text,
     };
     setTasksList([...tasksList, newTask]);
-    console.log('add new task from App.tsx');
   };
 
-  console.log(tasksList);
-
   const handleOnCheck = (id: string) => {
-    console.log('add task', id);
     const newTasksList = tasksList.map((task) => {
       if (task.id === id) {
         return {
@@ -55,7 +33,6 @@ function App() {
   };
 
   const handleOnDelete = (id: string) => {
-    console.log('delete task', id);
     const newTasksList = tasksList.filter((task) => task.id !== id);
     setTasksList(newTasksList);
   };

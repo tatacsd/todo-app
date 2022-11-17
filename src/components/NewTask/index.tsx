@@ -11,10 +11,9 @@ export function NewTask({ onCreatedTask }: NewTaskProps) {
 
   const handleCreatNewTask = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log('create new task');
-    console.log(newTask);
+
     onCreatedTask(newTask);
-    // setNewTask('');
+    setNewTask('');
   };
 
   const handleOnChange = (event: FormEvent<HTMLInputElement>) => {
@@ -30,13 +29,13 @@ export function NewTask({ onCreatedTask }: NewTaskProps) {
         <input
           type="text"
           required
-          placeholder="Adicione uma nova tarefa"
+          placeholder="Add a new task"
           name="newTask"
           value={newTask}
           onChange={(event) => handleOnChange(event)}
         />
         <button type="submit">
-          Criar <PlusCircle size={16} color="#fdfcfc" weight="bold" />
+          Add <PlusCircle size={20} />
         </button>
       </form>
     </div>

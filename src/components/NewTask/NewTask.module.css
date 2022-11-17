@@ -47,8 +47,9 @@
   width: 90px;
   height: 52px;
 
-  background: var(--blue-500);
+  background: var(--purple-500);
   border-radius: 8px;
+  border: none;
 
   font-size: 0.875rem;
   font-weight: 700;

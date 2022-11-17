@@ -5,9 +5,9 @@ export function Empty() {
     <div className={css.container}>
       <img src={clipboardIMG} alt="clipboard" />
       <p>
-        <strong>Você ainda não tem tarefas cadastradas</strong>
+        <strong>You don't have any tasks registered yet</strong>
       </p>
-      <p>Crie tarefas e organize seus itens a fazer</p>
+      <p>Create tasks and organize your to-do items</p>
     </div>
   );
 }

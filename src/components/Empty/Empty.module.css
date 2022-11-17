@@ -28,7 +28,8 @@
 
 @media (max-width: 767px) {
   .container {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     left: calc(50% - 100% / 2);
     top: 18rem;
     padding: 0 16px;
