@@ -17,8 +17,11 @@
   <img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/tatacsd/todo-app?color=7159c1" />
   <a href="http://www.linkedin.com/in/thayscasado" target="_blank">
   <img alt="Linkedin" src="https://img.shields.io/badge/-Linkedin-7159c1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thayscasado" />
+    </a>
+    <a href="https://gofund.me/3265ea9e" target="_blank">
   <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/tatacsd?color=7159c1" />
   </a>
+
 
 </div>
 
